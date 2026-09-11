@@ -1,0 +1,130 @@
+/* Brand guide Leanwork (T-10): paleta estritamente monocromática, Figtree,
+   layout centrado com respiro generoso — legível a distância na projeção. */
+
+:root {
+  --preto: #000000;
+  --branco: #ffffff;
+  --cinza-90: #1a1a1a;
+  --cinza-70: #4d4d4d;
+  --cinza-50: #808080;
+  --cinza-20: #cccccc;
+  --cinza-10: #e6e6e6;
+  --cinza-5: #f2f2f2;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  font-family: 'Figtree', system-ui, sans-serif;
+  font-weight: 400;
+  font-size: 1.125rem;
+  color: var(--preto);
+  background-color: var(--branco);
+}
+
+main {
+  width: 100%;
+  max-width: 640px;
+}
+
+.encurtador {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+h1 {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(2rem, 5vw, 3.5rem);
+  font-weight: 800;
+}
+
+.formulario-encurtar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  font-size: 1.125rem;
+  font-weight: 600;
+}
+
+input[type="text"] {
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 1.25rem;
+  color: var(--preto);
+  background-color: var(--branco);
+  border: 2px solid var(--preto);
+  border-radius: 4px;
+}
+
+input[type="text"]:focus {
+  outline: 3px solid var(--cinza-70);
+  outline-offset: 2px;
+}
+
+input[type="text"][readonly] {
+  background-color: var(--cinza-5);
+  border-color: var(--cinza-50);
+}
+
+button {
+  padding: 1rem;
+  font-family: inherit;
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--branco);
+  background-color: var(--preto);
+  border: 2px solid var(--preto);
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+button:focus-visible {
+  outline: 3px solid var(--cinza-70);
+  outline-offset: 2px;
+}
+
+button:hover {
+  background-color: var(--cinza-90);
+}
+
+button:active {
+  background-color: var(--cinza-70);
+}
+
+.mensagem-erro {
+  margin: 0;
+  padding-left: 0.75rem;
+  font-weight: 700;
+  border-left: 4px solid var(--preto);
+}
+
+.resultado-link {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  padding: 1.25rem;
+  border: 2px solid var(--preto);
+  border-radius: 4px;
+}
+
+#mensagem-copiado {
+  font-weight: 600;
+  color: var(--cinza-70);
+}

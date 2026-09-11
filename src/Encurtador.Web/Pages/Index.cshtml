@@ -1,0 +1,43 @@
+@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Encurtador de URL";
+}
+
+<div class="encurtador">
+    <h1>Encurtador de URL</h1>
+
+    <form method="post" asp-page="/Index" class="formulario-encurtar">
+        <label for="UrlInformada">Cole a URL que deseja encurtar</label>
+        <input type="text" id="UrlInformada" asp-for="UrlInformada" placeholder="https://www.exemplo.com.br/artigo" autocomplete="off" />
+        <button type="submit">Encurtar</button>
+
+        @if (Model.MensagemDeErro is not null)
+        {
+            <p class="mensagem-erro" role="alert">@Model.MensagemDeErro</p>
+        }
+    </form>
+
+    @if (Model.UrlCurta is not null)
+    {
+        <div class="resultado-link" role="status">
+            <label for="url-curta">Link curto</label>
+            <input type="text" id="url-curta" value="@Model.UrlCurta" readonly />
+            <button type="button" id="botao-copiar" data-url="@Model.UrlCurta">Copiar</button>
+            <span id="mensagem-copiado" hidden>Copiado!</span>
+        </div>
+    }
+</div>
+
+@section Scripts {
+    <script>
+        document.getElementById('botao-copiar')?.addEventListener('click', async (evento) => {
+            const url = evento.currentTarget.dataset.url;
+            await navigator.clipboard.writeText(url);
+
+            const mensagem = document.getElementById('mensagem-copiado');
+            mensagem.hidden = false;
+            setTimeout(() => { mensagem.hidden = true; }, 2000);
+        });
+    </script>
+}
