@@ -6,8 +6,6 @@ O projeto construído aqui é um encurtador de URL em .NET 10 — banal de prop�
 
 Se o pipeline de especificação só se justificasse em sistemas complexos, seria cerimônia de luxo. Este repositório existe para provar que ele funciona mesmo — sobretudo — num sistema que caberia num único arquivo.
 
-Foi apresentado na palestra **"Do PRD ao Deploy"** (LondrinaTech Meetup, 15/08/2026).
-
 ---
 
 ## O que é o Leanwork SDD
