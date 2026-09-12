@@ -2,11 +2,9 @@
 
 Este repositório é uma **demonstração completa do [Leanwork SDD](https://leanwork.github.io/leanwork-sdd/)**: um plugin de *Spec-Driven Development* para o **Claude Code** que conduz um projeto de software da arquitetura ao review, sem que a documentação e o código se soltem um do outro.
 
-> Se você quer aprender a aplicar esse processo no seu próprio projeto .NET, é exatamente isso que eu ensino.
->
-> **[Bootcamp Dev .NET IA 10x](https://aspnetpro.com.br/bootcamp-dev-net-ia-10x/)** — 4 lives ao vivo, o método completo
->
-> **[Mentoria Dev .NET IA 10x](https://aspnetpro.com.br/mentoria-dev-net-ia-10x/)** — 12 semanas aplicando no seu projeto com acompanhamento individual
+> Se você quer aprender a aplicar esse processo no seu próprio projeto .NET, é exatamente isso que eu ensino.  
+> **[Bootcamp Dev .NET IA 10x](https://aspnetpro.com.br/bootcamp-dev-net-ia-10x/)** — 4 lives ao vivo, o método completo  
+> **[Mentoria Dev .NET IA 10x](https://aspnetpro.com.br/mentoria-dev-net-ia-10x/)** — 12 semanas aplicando no seu projeto com acompanhamento individual  
 
 O projeto construído aqui é um encurtador de URL em .NET 10 — banal de propósito. **O produto real deste repositório não é o encurtador: é a cadeia de rastreabilidade `ADR → RN → CA → T → R`**, que conecta cada decisão de arquitetura a uma regra de negócio, a um critério de aceite, a uma tarefa, a um teste automatizado e a um relatório de review — de forma verificável por busca textual.
 
